@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pace Place</string>
+    <string name="map_title">Map</string>
+    <string name="book_finder_title">Find a Book</string>
+    <string name="course_rater_title">Rate a Course</string>
+
+    <string-array name="maps_array">
+        <item>NYC</item>
+        <item>WestChester</item>
+    </string-array>
+
+</resources>
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iconLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.daniel.paceplace.IconScreenActivity">
+
+    <ImageView
+        android:id="@+id/mapImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/map_icon" />
+
+    <ImageView
+        android:id="@+id/courseRaterImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/mapImage"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@+id/mapImage"
+        android:src="@drawable/course_rater_icon" />
+
+    <ImageView
+        android:id="@+id/libraryimage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/courseRaterImage"
+        android:layout_toEndOf="@+id/mapImage"
+        android:src="@drawable/library_icon" />
+
+    <TextView
+        android:id="@+id/mapTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/mapImage"
+        android:layout_alignStart="@+id/mapImage"
+        android:layout_below="@+id/mapImage"
+        android:gravity="center"
+        android:text="@string/map_title" />
+
+    <TextView
+        android:id="@+id/courseRaterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/courseRaterImage"
+        android:layout_alignTop="@+id/mapImage"
+        android:layout_toStartOf="@+id/mapImage"
+        android:gravity="center"
+        android:text="@string/course_rater_title" />
+
+    <TextView
+        android:id="@+id/bookFinderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/libraryimage"
+        android:layout_alignTop="@+id/mapImage"
+        android:layout_toEndOf="@+id/mapImage"
+        android:text="@string/book_finder_title"
+        android:gravity="center"/>
+
+
+</RelativeLayout>
