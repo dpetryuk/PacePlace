@@ -5,10 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 public class IconScreenActivity extends AppCompatActivity {
 
-    ImageView mapIcon;
+    RelativeLayout mapLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +21,9 @@ public class IconScreenActivity extends AppCompatActivity {
 
     private void setIconClickListeners(){
 
-        mapIcon = findViewById(R.id.mapImage);
+        mapLayout = findViewById(R.id.mapLayout);
 
-        mapIcon.setOnClickListener(new View.OnClickListener() {
+        mapLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(IconScreenActivity.this, MapActivity.class);
