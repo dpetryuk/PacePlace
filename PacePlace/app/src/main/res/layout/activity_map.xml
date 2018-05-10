@@ -5,8 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.daniel.paceplace.MapActivity">
+    tools:context="com.example.daniel.paceplace.MapActivity"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
 
+    <com.example.daniel.paceplace.TouchImageView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/mapSpinner" />
 
     <Spinner
         android:id="@+id/mapSpinner"
@@ -16,4 +24,15 @@
         android:layout_alignParentTop="true">
 
     </Spinner>
+
+    <com.sunfusheng.marqueeview.MarqueeView
+        android:id="@+id/marqueeView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="97dp"
+        android:background="@color/colorPrimary">
+
+    </com.sunfusheng.marqueeview.MarqueeView>
 </RelativeLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.daniel.paceplace">
+    <permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -18,6 +19,12 @@
         </activity>
         <activity android:name=".SignupActivity" android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MapActivity"/>
+        <activity android:name=".BookFinderActivity">
+
+        <meta-data android:name="android.app.searchable"
+            android:resource="@xml/searchable" />
+
+        </activity>
         <activity android:name=".IconScreenActivity" android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 

@@ -3,6 +3,8 @@
     <string name="map_title">Map</string>
     <string name="book_finder_title">Find a Book</string>
     <string name="course_rater_title">Rate a Course</string>
+    <string name="search_title">Books</string>
+    <string name="search_hint">Find a Book</string>
 
     <string-array name="maps_array">
         <item>NYC</item>

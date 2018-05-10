@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 public class IconScreenActivity extends AppCompatActivity {
 
     RelativeLayout mapLayout;
+    RelativeLayout bookFinderLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +23,20 @@ public class IconScreenActivity extends AppCompatActivity {
     private void setIconClickListeners(){
 
         mapLayout = findViewById(R.id.mapLayout);
-
+        bookFinderLayout = findViewById(R.id.bookFinderLayout);
         mapLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(IconScreenActivity.this, MapActivity.class);
-                startActivity(intent);
+                Intent mapIntent = new Intent(IconScreenActivity.this, MapActivity.class);
+                startActivity(mapIntent);
+            }
+        });
 
+        bookFinderLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bookIntent = new Intent(IconScreenActivity.this, BookFinderActivity.class);
+                startActivity(bookIntent);
             }
         });
 

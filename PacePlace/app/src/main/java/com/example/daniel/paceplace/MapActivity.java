@@ -1,23 +1,42 @@
 package com.example.daniel.paceplace;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.sunfusheng.marqueeview.MarqueeView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MapActivity extends AppCompatActivity {
+
+    TouchImageView map;
+    Drawable nycMapId;
+    Drawable westchesterMapId;
+    MarqueeView marqueeView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        configureSpinner();
+        map = findViewById(R.id.map);
+        nycMapId = getResources().getDrawable(R.drawable.nyc_campus_map);
+        westchesterMapId = getResources().getDrawable(R.drawable.westchester_campus_map);
+        map.setImageDrawable(nycMapId);
+        marqueeView = findViewById(R.id.marqueeView);
 
-        FirstMapFrag firstFrag = new FirstMapFrag();
-        getFragmentManager().beginTransaction() //Lets android know that something will happen to a fragment
-                .add(R.id.mapContainer, firstFrag).commit(); // add fragment A to activity at runtime
+        configureSpinner();
+        configureMarqueeViewWithFunFacts();
+
+
+
+
 
     }
 
@@ -29,6 +48,7 @@ public class MapActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(onItemSelectedListener);
+
     }
 
 
@@ -36,14 +56,18 @@ public class MapActivity extends AppCompatActivity {
     AdapterView.OnItemSelectedListener onItemSelectedListener = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            //String[] mapStringArray = getResources().getStringArray(R.array.maps_array);
-            if(i == 0){
-                getFragmentManager().beginTransaction() //Lets android know that something will happen to a fragment
-                        .replace(R.id.mapContainer, new FirstMapFrag()).commit();
-            }else{
-                getFragmentManager().beginTransaction() //Lets android know that something will happen to a fragment
-                        .replace(R.id.mapContainer, new SecondMapFrag()).commit();
+
+            switch(i){
+                case 0:
+                    map.setImageDrawable(nycMapId);
+                    Log.i("Clicked nyc:", "index = 0");
+                    break;
+                case 1:
+                    map.setImageDrawable(westchesterMapId);
+                    Log.i("Clicked westchester:", "index = 1");
+                    break;
             }
+
         }
 
         @Override
@@ -51,5 +75,29 @@ public class MapActivity extends AppCompatActivity {
 
         }
     };
+
+    private void configureMarqueeViewWithFunFacts(){
+        List<String> funFacts = new ArrayList<>();
+        int flipIntervalInMs = 4000;
+        funFacts.add("Number of countries represented in student body – 136");
+        funFacts.add("Clubs – 61 in PLV, 88 in NYC");
+        funFacts.add("Student faculty ratio (as of 2016) – 16:1");
+        funFacts.add("Gender: Female - 61%   Male - 39%");
+        marqueeView.setFlipInterval(flipIntervalInMs); // 4s flip interval
+        marqueeView.startWithList(funFacts);
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        marqueeView.startFlipping();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        marqueeView.stopFlipping();
+    }
 
 }
