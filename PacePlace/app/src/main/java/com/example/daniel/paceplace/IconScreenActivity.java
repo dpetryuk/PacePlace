@@ -11,6 +11,7 @@ public class IconScreenActivity extends AppCompatActivity {
 
     RelativeLayout mapLayout;
     RelativeLayout bookFinderLayout;
+    RelativeLayout courseRaterLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,8 @@ public class IconScreenActivity extends AppCompatActivity {
 
         mapLayout = findViewById(R.id.mapLayout);
         bookFinderLayout = findViewById(R.id.bookFinderLayout);
+        courseRaterLayout = findViewById(R.id.courseRaterLayout);
+
         mapLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,6 +40,14 @@ public class IconScreenActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent bookIntent = new Intent(IconScreenActivity.this, BookFinderActivity.class);
                 startActivity(bookIntent);
+            }
+        });
+
+        courseRaterLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent courseIntent = new Intent(IconScreenActivity.this, CourseListDisplayActivity.class);
+                startActivity(courseIntent);
             }
         });
 

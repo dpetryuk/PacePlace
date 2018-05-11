@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="#ffffff"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryMed"
+    android:orientation="vertical"
 
     tools:context=".BookFinderActivity">
 
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
-        android:text="Books for this Semester"
+        android:text="@string/books_for_this_semester"
         android:textAlignment="center"
         android:textColor="@color/logoSecondary"
         android:textSize="30sp" />

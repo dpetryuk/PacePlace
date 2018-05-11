@@ -72,7 +72,7 @@ public class SignupActivity extends AppCompatActivity {
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
 
-        // TODO: Implement your own signup logic here.
+
 
         new android.os.Handler().postDelayed(
                 new Runnable() {

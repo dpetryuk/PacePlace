@@ -8,7 +8,10 @@
  * Updated By: singpolyma
  * -------------------
  * Extends Android ImageView to include pinch zooming, panning, fling and double tap zoom.
+ * Imported from: https://github.com/MikeOrtiz/TouchImageView
  */
+
+
 
 package com.example.daniel.paceplace;
 

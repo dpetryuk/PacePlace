@@ -107,7 +107,7 @@ public class BookListAdapter extends BaseAdapter implements Filterable {
 
 
 
-    private class BookFilter extends Filter {
+    private class BookFilter extends Filter { //Filter to search for books based on title
 
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {

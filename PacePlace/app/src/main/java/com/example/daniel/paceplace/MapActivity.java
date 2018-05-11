@@ -40,7 +40,7 @@ public class MapActivity extends AppCompatActivity {
 
     }
 
-    private void configureSpinner(){
+    private void configureSpinner(){ // spinner to switch between maps
         Spinner spinner = findViewById(R.id.mapSpinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.maps_array, android.R.layout.simple_spinner_item);

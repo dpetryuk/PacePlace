@@ -23,6 +23,7 @@
         android:layout_toEndOf="@+id/imageView"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/hint"
         />
 
 
@@ -31,7 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_below="@+id/titleTextView"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_toEndOf="@+id/imageView"
+        android:textColor="@color/hint"/>
 
 
 </RelativeLayout>

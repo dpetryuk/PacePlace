@@ -21,7 +21,7 @@ public class BookFinderActivity extends AppCompatActivity implements SearchView.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.book_finder_view);
+        setContentView(R.layout.book_finder_listview);
 
 
         List<Book> bookList = new ArrayList<>();

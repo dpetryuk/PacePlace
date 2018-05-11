@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mapContainer"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.daniel.paceplace.MapActivity"
+    android:background="@color/hint"
     android:fillViewport="true"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context="com.example.daniel.paceplace.MapActivity">
 
     <com.example.daniel.paceplace.TouchImageView
         android:id="@+id/map"

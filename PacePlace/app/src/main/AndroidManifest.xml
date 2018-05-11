@@ -26,6 +26,9 @@
 
         </activity>
         <activity android:name=".IconScreenActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".CourseListDisplayActivity" />
+        <activity android:name=".CourseRatingsActivity" />
+        <activity android:name=".RateACourseActivity" />
     </application>
 
 </manifest>
